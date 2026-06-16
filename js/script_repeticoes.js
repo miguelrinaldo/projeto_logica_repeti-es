@@ -98,6 +98,13 @@ console.log('-----------LISTA POR FOR IN-----------')
 for(let pessoa in pessoas){
     console.log(pessoas.nome, pessoa.idade, pessoa.renda)
 }
-
+console.log('-----------LISTA POR FOR OF-----------')
+for(let pessoa in pessoas){
+    console.log(pessoas[indiceObjPessoa].nome, pessoa[indiceObjPessoas].idade, pessoa[indiceObjPessoas].renda)
+}
 //FOREACH
 const divForeach = document.querySelector('#div-foreach')
+pessoas.forEach((elem,i) =>{
+       divForeach.innerHTML += `${Element.nome}, ${elem.idade} anos com renda R$ ${elem.renda.toFixed(2).replace('.', '.')}} <br>`
+
+})
